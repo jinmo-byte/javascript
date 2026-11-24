@@ -2,9 +2,19 @@
     <body>
         <img id="image" src="snow1.jpg" width="120" height="100">
         <script>
+            var imgsrc = 1;
             function changedImage() {
+               if(imgsrc == 2) {
+                document.getElementById("image").src ="snow1.jpg";
+               imgsrc = 1;
+            }else{
                 document.getElementById("image").src ="snow2.jpg";
+                imgsrc = 2;
             }
+            }
+            // function changedImage() {
+            //     document.getElementById("image").src ="snow2.jpg";
+            // }
         </script>
         <input type="button" onclick="changedImage()" value="click!"/>
     </body>
