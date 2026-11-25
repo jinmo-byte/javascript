@@ -10,6 +10,7 @@
                 document.getElementById("display").value = expression;
             }
             function compute() {
+                expression = "(" + expression + ")";
                 document.getElementById("display").value = eval(expression);
             }
             function clearDisplay() {
