@@ -14,6 +14,10 @@
                 document.getElementById("display").value = eval(expression);
             }
             function clearDisplay() {
+                expression = expression.substring(0, expression.length - 1);
+                document.getElementById("display").value = expression;
+            }
+            function AllclearDisplay() {
                 expression = "";
                 document.getElementById("display").value = 0;
             }
@@ -21,7 +25,9 @@
     </head>
     <body>
         <form>
-            display <input id="display" class="theme-primary btn-outline" value="0" size="30">
+            계산기
+            <br> 
+            <input id="display" class="theme-primary btn-outline" value="0" size="17">
             <br>
             <input type="button" class="theme-danger btn-solid btn-lg" value="7" onclick="add('7')">
             <input type="button" class="theme-danger btn-solid btn-lg" value="8" onclick="add('8')">
@@ -41,7 +47,8 @@
             <input type="button" class="theme-secondary btn-solid btn-lg" value="0" onclick="add('0')">
             <input type="button" class="theme-secondary btn-outline btn-lg" value="+" onclick="add('+')">
             <br>
-            <input type="button" class="btn" value="Clear"  onclick="clearDisplay()">
+            <input type="button" class="btn" value="C"  onclick="clearDisplay()">
+            <input type="button" class="btn" value="AC"  onclick="clearDisplay()">
             <input type="button" class="theme-success btn-solid" value="Enter" name="enter" onclick="compute()">
         </form>
     </body>
